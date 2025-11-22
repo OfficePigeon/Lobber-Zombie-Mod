@@ -1,0 +1,30 @@
+{
+  "entity.lobber_zombie.ambient": {
+	"sounds": [ "mob/zombie/say1", "mob/zombie/say2", "mob/zombie/say3" ],
+	"subtitle": "subtitles.entity.lobber_zombie.ambient"
+  },
+  "entity.lobber_zombie.death": {
+	"sounds": [  "mob/zombie/death" ],
+	"subtitle": "subtitles.entity.lobber_zombie.death"
+  },
+  "entity.lobber_zombie.hurt": {
+	"sounds": [ "mob/zombie/hurt1", "mob/zombie/hurt2" ],
+	"subtitle": "subtitles.entity.lobber_zombie.hurt"
+  },
+  "entity.lobber_zombie.step": {
+	"sounds": [ "mob/zombie/step1", "mob/zombie/step2", "mob/zombie/step3", "mob/zombie/step4", "mob/zombie/step5" ],
+	"subtitle": "subtitles.block.generic.footsteps"
+  },
+  "entity.lobber_zombie.throw": {
+	"sounds": [
+	  { "name": "wich:mob/lobber_zombie/throw1", "volume": 0.25 },
+	  { "name": "wich:mob/lobber_zombie/throw2", "volume": 0.25 },
+	  { "name": "wich:mob/lobber_zombie/throw3", "volume": 0.25 }
+	],
+	"subtitle": "subtitles.entity.lobber_zombie.throw"
+  },
+  "entity.parrot.imitate.lobber_zombie": {
+	"sounds": [ { "name": "wich:entity.lobber_zombie.ambient", "pitch": 1.8, "type": "event", "volume": 0.6 } ],
+	"subtitle": "subtitles.entity.parrot.imitate.lobber_zombie"
+  }
+}

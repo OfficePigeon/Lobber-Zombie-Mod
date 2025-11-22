@@ -1,0 +1,28 @@
+{
+	"schemaVersion": 1,
+	"id": "wich_lobber-zombies",
+	"version": "${version}",
+	"name": "Lobber Zombies",
+	"description": "Adds the Lobber Zombie from Minecraft Earth.",
+	"authors": [ "dovewich" ],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/OfficePigeon/Lobber-Zombie-Mod"
+	},
+	"license": "",
+	"icon": "assets/wich/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [ "fun.wich.LobberZombiesMod" ],
+		"client": [ "fun.wich.client.LobberZombiesClient" ]
+	},
+	"mixins": [
+		"wich.lobberzombies.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.17.3",
+		"minecraft": ">=1.21.9",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
