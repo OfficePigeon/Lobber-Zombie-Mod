@@ -5,7 +5,6 @@
   "subtitles.entity.lobber_zombie.ambient": "Lobber Zombie groans",
   "subtitles.entity.lobber_zombie.death": "Lobber Zombie dies",
   "subtitles.entity.lobber_zombie.hurt": "Lobber Zombie hurts",
-  "subtitles.entity.lobber_zombie.step": "Lobber Zombie steps",
   "subtitles.entity.lobber_zombie.throw": "Lobber Zombie throws",
   "subtitles.entity.parrot.imitate.lobber_zombie": "Parrot groans"
 }

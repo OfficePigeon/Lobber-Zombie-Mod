@@ -1,0 +1,10 @@
+{
+  "entity.wich.lobber_zombie": "Undead Throwin' Sailor",
+  "entity.wich.lobber_zombie_thrown_flesh": "Putrid Rations",
+  "item.wich.lobber_zombie_spawn_egg": "Undead Throwin' Sailor Cackle Fruit",
+  "subtitles.entity.lobber_zombie.ambient": "Undead Throwin' Sailor groans",
+  "subtitles.entity.lobber_zombie.death": "Undead Throwin' Sailor perishes",
+  "subtitles.entity.lobber_zombie.hurt": "Undead Throwin' Sailor gets hurt",
+  "subtitles.entity.lobber_zombie.throw": "Putrid Rations be flyin'",
+  "subtitles.entity.parrot.imitate.lobber_zombie": "Yer' best matey be groanin'"
+}
