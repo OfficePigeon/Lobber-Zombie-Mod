@@ -15,7 +15,7 @@ import net.minecraft.world.World;
 
 public class LobberZombieThrownFleshEntity extends ThrownItemEntity {
 	public LobberZombieThrownFleshEntity(EntityType<? extends LobberZombieThrownFleshEntity> entityType, World world) { super(entityType, world); }
-	public LobberZombieThrownFleshEntity(World world, LivingEntity owner, ItemStack stack) { super(LobberZombiesMod.LOBBER_ZOMBIE_THROWN_FLESH, owner, world, stack); }
+	public LobberZombieThrownFleshEntity(World world, LivingEntity owner) { super(LobberZombiesMod.LOBBER_ZOMBIE_THROWN_FLESH, owner, world); }
 	@Override protected Item getDefaultItem() { return Items.ROTTEN_FLESH; }
 	protected ParticleEffect getParticleParameters() { return new ItemStackParticleEffect(ParticleTypes.ITEM, new ItemStack(getDefaultItem())); }
 	@Override
@@ -23,15 +23,14 @@ public class LobberZombieThrownFleshEntity extends ThrownItemEntity {
 		if (status == 3) {
 			ParticleEffect particleEffect = this.getParticleParameters();
 			for (int i = 0; i < 8; ++i) {
-				this.getEntityWorld().addParticleClient(particleEffect, this.getX(), this.getY(), this.getZ(), 0, 0, 0);
+				this.getEntityWorld().addParticle(particleEffect, this.getX(), this.getY(), this.getZ(), 0, 0, 0);
 			}
 		}
 	}
 	@Override
 	protected void onEntityHit(EntityHitResult entityHitResult) {
 		super.onEntityHit(entityHitResult);
-		//noinspection deprecation
-		entityHitResult.getEntity().serverDamage(this.getDamageSources().thrown(this, this.getOwner()), 1);
+		entityHitResult.getEntity().damage(this.getDamageSources().thrown(this, this.getOwner()), 1);
 	}
 	@Override
 	protected void onCollision(HitResult hitResult) {
