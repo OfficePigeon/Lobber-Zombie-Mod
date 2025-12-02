@@ -16,16 +16,16 @@ public class LobberZombieEntityRenderer extends ZombieBaseEntityRenderer<LobberZ
 		super(context, new LobberZombieEntityModel(context.getPart(LobberZombiesClient.LOBBER_ZOMBIE)), new LobberZombieEntityModel(context.getPart(LobberZombiesClient.LOBBER_ZOMBIE_BABY)), EquipmentModelData.mapToEntityModel(EntityModelLayers.ZOMBIE_EQUIPMENT, context.getEntityModels(), ZombieEntityModel<LobberZombieEntityRenderState>::new), EquipmentModelData.mapToEntityModel(EntityModelLayers.ZOMBIE_BABY_EQUIPMENT, context.getEntityModels(), ZombieEntityModel<LobberZombieEntityRenderState>::new));
 		this.features.removeIf(feature -> feature instanceof HeldItemFeatureRenderer);
 		this.addFeature(new HeldItemFeatureRenderer<>(this) {
-			public void render(MatrixStack matrixStack, OrderedRenderCommandQueue orderedRenderCommandQueue, int i, LobberZombieEntityRenderState state, float f, float g) {
-				if (state.attackingRanged) super.render(matrixStack, orderedRenderCommandQueue, i, state, f, g);
+			public void render(MatrixStack matrixStack, OrderedRenderCommandQueue orderedRenderCommandQueue, int i, LobberZombieEntityRenderState state, float headYaw, float headPitch) {
+				if (state.attackingRanged) super.render(matrixStack, orderedRenderCommandQueue, i, state, headYaw, headPitch);
 			}
 		});
 	}
-	public LobberZombieEntityRenderState createRenderState() { return new LobberZombieEntityRenderState(); }
+	@Override public LobberZombieEntityRenderState createRenderState() { return new LobberZombieEntityRenderState(); }
 	@Override
 	public void updateRenderState(LobberZombieEntity entity, LobberZombieEntityRenderState state, float f) {
 		super.updateRenderState(entity, state, f);
 		state.attackingRanged = entity.IsAttackingRanged();
 	}
-	public Identifier getTexture(LobberZombieEntityRenderState zombieEntityRenderState) { return TEXTURE; }
+	@Override public Identifier getTexture(LobberZombieEntityRenderState zombieEntityRenderState) { return TEXTURE; }
 }
