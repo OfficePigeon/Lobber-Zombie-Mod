@@ -27,5 +27,5 @@ public class LobberZombieEntityRenderer extends ZombieBaseEntityRenderer<LobberZ
 		super.updateRenderState(entity, state, f);
 		state.attackingRanged = entity.IsAttackingRanged();
 	}
-	@Override public Identifier getTexture(LobberZombieEntityRenderState zombieEntityRenderState) { return TEXTURE; }
+	@Override public Identifier getTexture(LobberZombieEntityRenderState state) { return TEXTURE; }
 }
